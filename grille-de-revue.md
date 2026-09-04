@@ -106,8 +106,6 @@ On mesure surtout le **S** (une responsabilité par unité) et le **D** (dépend
 
 On peut se tromper dans les 2 sens. Pas assez de structure : une fonction qui valide, calcule et écrit en base de données en même temps. [Trop de structure](https://agona.dev/consigne/#structure) : une interface qui n'apporte rien, ou un découpage qui oblige à ouvrir 4 fichiers pour suivre une seule règle. La question à se poser est toujours la même : est-ce que le métier est séparé de l'affichage et du stockage ?
 
-**Bénéfice concret :** `compute_total` se teste en une ligne, la route devient triviale, changer de base de données ne touche pas au métier.
-
 *Avant : la route fait tout*
 
 ```
@@ -147,6 +145,8 @@ def create_order(payload: OrderIn, repo: OrderRepository = Depends(get_order_rep
     return repo.create(total=total)
 ```
 
+**Bénéfice concret :** `compute_total` se teste en une ligne, la route devient triviale, changer de base de données ne touche pas au métier.
+
 | Niveau | Points | On observe |
 |---|---|---|
 | Maîtrisé | 4 | Le métier est séparé de l'affichage et du stockage ; aucune abstraction inutile |
@@ -159,8 +159,6 @@ def create_order(payload: OrderIn, repo: OrderRepository = Depends(get_order_rep
 Ce critère note la duplication de **logique**. Copier-coller une mécanique, c'est un bug à corriger à N endroits ; le texte répété n'en relève pas.
 
 Dupliquer n'est pas toujours une faute. 2 morceaux de code qui se ressemblent aujourd'hui mais qui vont évoluer séparément valent mieux séparés. Ce qu'on vous demande, c'est de l'écrire : une duplication avec un commentaire `# pourquoi :` est un choix, la même sans rien est un oubli. [À l'inverse](https://agona.dev/consigne/#structure), regrouper 2 choses qui n'ont rien à voir crée un problème que l'équipe suivante paiera. Une abstraction se juge à ce qu'elle apporte (isoler une dépendance, rendre un test possible), pas au nombre de ses implémentations.
-
-**Le signe qu'un refactor DRY était justifié :** il corrige souvent des bugs au passage (ici, la gestion d'erreur et une fuite de `setState`).
 
 *Avant : la même logique recopiée dans Users, Products, Orders…*
 
@@ -197,6 +195,8 @@ function useResource<T>(url: string) {
 }
 ```
 
+**Le signe qu'un refactor DRY était justifié :** il corrige souvent des bugs au passage (ici, la gestion d'erreur et une fuite de `setState`).
+
 | Niveau | Points | On observe |
 |---|---|---|
 | Maîtrisé | 2 | Aucune logique recopiée ; les duplications restantes sont assumées par écrit |
@@ -209,6 +209,19 @@ function useResource<T>(url: string) {
 Ce critère note la couverture des [**règles métier et de leurs cas limites**](https://agona.dev/consigne/#tests), en priorité là où une erreur coûte cher (argent, données, sécurité, action irréversible), et des tests qui tournent d'une seule commande.
 
 La couverture ne dit pas si vos tests sont bons. Elle dit seulement quelles lignes ne sont jamais exécutées pendant les tests : on peut atteindre 100 % sans rien vérifier du tout. Alors ne visez pas un pourcentage. Partez des règles du projet, par exemple « une commande vide est refusée » ou « une remise ne dépasse jamais 50 % », et écrivez un test par règle, puis un test par cas limite. Un seul gros test qui rejoue tout le parcours ne suffit pas : quand il casse, il ne dit pas où.
+
+```
+# Test unitaire du métier : rapide, sans base de données ni réseau
+def test_compute_total_somme_prix_fois_quantite():
+    items = [OrderItem(price=Decimal("2.50"), qty=3),
+             OrderItem(price=Decimal("1.00"), qty=1)]
+    assert compute_total(items) == Decimal("8.50")
+
+# Test d'API : le contrat HTTP est-il respecté ?
+def test_create_order_refuse_quantite_negative(client):
+    resp = client.post("/orders", json={"items": [{"price": "2.5", "qty": -1}]})
+    assert resp.status_code == 422        # Pydantic rejette qty <= 0
+```
 
 **Ce qu'on veut voir**
 - Un test par règle métier, un test par cas limite (entrée vide, zéro, négatif).
@@ -281,12 +294,6 @@ Le code utilise le langage et le framework **tels qu'ils sont conçus**, au lieu
 
 On vous demande de vérifier, avant d'écrire, si le langage ou le framework le fait déjà. Refaire à la main ce qui existe, c'est du code en plus à maintenir et des bugs déjà corrigés ailleurs qu'on réintroduit.
 
-**Ce qu'on veut voir**
-- Validation par le schéma, injection par `Depends`, hooks React pour l'état et les effets, requêtes via l'ORM ou paramétrées, utilitaires standard (dates, parsing).
-
-**Ce qui fait chuter la note**
-- Validation à la main, état global bricolé, un utilitaire réécrit alors que la stdlib le fournit, une dépendance lourde pour une fonction triviale, le framework contourné plutôt qu'utilisé.
-
 *Avant : la validation réécrite à la main, que Pydantic fait déjà*
 
 ```
@@ -311,6 +318,12 @@ def create_user(payload: UserIn, repo: UserRepository = Depends(get_user_repo)):
     return repo.create(payload.email, payload.age)
 ```
 
+**Ce qu'on veut voir**
+- Validation par le schéma, injection par `Depends`, hooks React pour l'état et les effets, requêtes via l'ORM ou paramétrées, utilitaires standard (dates, parsing).
+
+**Ce qui fait chuter la note**
+- Validation à la main, état global bricolé, un utilitaire réécrit alors que la stdlib le fournit, une dépendance lourde pour une fonction triviale, le framework contourné plutôt qu'utilisé.
+
 | Niveau | Points | On observe |
 |---|---|---|
 | Maîtrisé | 2 | Le framework et la bibliothèque standard sont utilisés pour ce qu'ils font |
@@ -321,15 +334,6 @@ def create_user(payload: UserIn, repo: UserRepository = Depends(get_user_repo)):
 ### 10 · Décisions d'architecture écrites /3
 
 Les décisions structurantes du sprint sont écrites, avec leurs **alternatives** et leurs **conséquences**, dans des fichiers numérotés placés dans [`docs/adr/`](https://agona.dev/consigne/#pourquoi).
-
-Écrire ce que vous avez écarté et pourquoi prend 10 lignes, et rend votre architecture lisible pour celui qui arrive après. C'est aussi la seule façon de montrer votre raisonnement sans passer par l'oral.
-
-**Ce qu'on veut voir**
-- Toute décision qui engage les sprints suivants, ou qui avait plusieurs options raisonnables, est écrite ; les alternatives sont réelles ; les conséquences incluent ce que la décision coûte.
-- Les écarts aux critères 04 et 05 sont justifiés là, ou par un commentaire `# pourquoi :` à l'endroit du choix.
-
-**Ce qui fait chuter la note**
-- Un changement d'architecture sans trace écrite, un ADR rédigé après coup pour cocher la case, des décisions annoncées à l'oral et introuvables dans le dépôt.
 
 *Le format attendu, 10 lignes suffisent*
 
@@ -352,6 +356,15 @@ Option 2.
 Le métier devient testable sans base de données. Un fichier de plus par entité.
 Si un jour on a besoin de requêtes complexes, il faudra rouvrir ce choix.
 ```
+
+**Ce qu'on veut voir**
+- Toute décision qui engage les sprints suivants, ou qui avait plusieurs options raisonnables, est écrite ; les alternatives sont réelles ; les conséquences incluent ce que la décision coûte.
+- Les écarts aux critères 04 et 05 sont justifiés là, ou par un commentaire `# pourquoi :` à l'endroit du choix.
+
+**Ce qui fait chuter la note**
+- Un changement d'architecture sans trace écrite, un ADR rédigé après coup pour cocher la case, des décisions annoncées à l'oral et introuvables dans le dépôt.
+
+Écrire ce que vous avez écarté et pourquoi prend 10 lignes, et rend votre architecture lisible pour celui qui arrive après. C'est aussi la seule façon de montrer votre raisonnement sans passer par l'oral.
 
 | Niveau | Points | On observe |
 |---|---|---|
