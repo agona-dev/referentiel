@@ -2,30 +2,29 @@
 
 > Le dossier individuel de compétences de l'apprenant, tenu par le formateur tout au long du parcours.
 
-## Ce que le livret n'est pas
+## Ce que le livret est
 
-Ce n'est **ni une note, ni un rang, ni un cumul**. La décision du 24/08 tient :
-aucune compétition individuelle, ce sont les bases de code qui sont mises en
-compétition. Constater qu'une personne a atteint un objectif n'est pas la
-classer. Le livret ne produit aucun classement et ne sert jamais à exclure :
-la non-exclusion pour insuffisance de résultats reste absolue.
+Le livret est un constat individuel, objectif par objectif, sans note, sans
+rang, sans cumul et sans pouvoir d'exclusion. La décision du 24/08 tient : la
+compétition se joue entre les bases de code, et entre elles seulement. La
+non-exclusion pour insuffisance de résultats reste absolue.
 
-## Les quatre statuts
+## Les 4 statuts
 
-`non abordé` (l'objectif n'a pas encore été travaillé à ce stade du parcours) ·
-`en cours` · `atteint` · `non atteint` (travaillé, pas encore acquis en fin de
-parcours).
+Les statuts sont `non abordé` (l'objectif reste à travailler à ce stade du
+parcours), `en cours`, `atteint` et `non atteint` (travaillé, encore à
+acquérir en fin de parcours).
 
-## Les douze objectifs et leur preuve naturelle
+## Les 12 objectifs et leur preuve naturelle
 
-Chaque objectif possède déjà un dispositif qui le documente. Rien de nouveau à
-inventer : il s'agit d'**attribuer individuellement** ce qui est déjà produit.
+Chaque objectif possède déjà un dispositif qui le documente. Le livret
+**attribue individuellement** ce que ces dispositifs produisent déjà.
 
 | # | Objectif | Où se trouve la preuve individuelle |
 |---|---|---|
 | 1 | Concevoir et implémenter une fonctionnalité de bout en bout | Contributions git sur une fonctionnalité complète |
 | 2 | Écrire un code lisible et structuré, couvert par des tests | Constats de la grille de revue rapportés aux contributions |
-| 3 | Reprendre une base écrite par une autre équipe et la faire évoluer | Sprint d'héritage de la base commune, cœur du modèle |
+| 3 | Reprendre une base écrite par une autre équipe et la faire évoluer | Sprint d'héritage de la base commune |
 | 4 | Travailler à 5 sur la même base de code | Historique git, pull requests, revues croisées |
 | 5 | Industrialiser une application | Dockerfile, démarrage en une commande, documentation de reprise |
 | 6 | Réflexes de sécurité élémentaires | Critère sécurité gradué de la grille de revue |
@@ -38,54 +37,58 @@ inventer : il s'agit d'**attribuer individuellement** ce qui est déjà produit.
 
 ## La ligne de départ
 
-Établie **sans étape supplémentaire**, à partir de ce qui existe déjà au moment
-de l'admission : le rendu du test d'entrée et la fiche d'entretien. Seuls les
-objectifs 1 à 4 sont partiellement observables à ce moment ; les huit autres
-partent en `non abordé`, ce qui est le constat honnête et non un déficit.
+La ligne de départ est établie **sans étape supplémentaire**, à partir de ce
+qui existe déjà au moment de l'admission : le rendu du test d'entrée et la
+fiche d'entretien. Seuls les objectifs 1 à 4 sont partiellement observables à
+ce moment. Les 8 autres partent en `non abordé`.
 
 Le livret ouvre donc sur une photographie datée, signée par l'apprenant et par
-le formateur, qui rend la progression mesurable au lieu d'être affirmée.
+le formateur, qui rend la progression mesurable.
 
 ## Le rythme
 
-Mise à jour **à chaque fin de sprint**, au même moment que les évaluations
-collectives, par le formateur ou le suppléant. Trois éléments par objectif
-touché : le statut, la preuve qui l'appuie, une phrase de commentaire.
+Le livret est mis à jour **à chaque fin de sprint**, au même moment que les
+évaluations collectives, par le formateur ou le suppléant. Chaque objectif
+touché reçoit 3 éléments : le statut, la preuve qui l'appuie, une phrase de
+commentaire.
 
-**Auto-positionnement de l'apprenant** sur les mêmes objectifs, rempli avant
-l'entretien de sprint. L'écart entre son auto-positionnement et le constat de
+L'apprenant remplit un **auto-positionnement** sur les mêmes objectifs avant
+l'entretien de sprint. L'écart entre cet auto-positionnement et le constat de
 l'évaluateur est le matériau de l'échange.
+
+## Le sprint suivant
+
+À l'entretien de sprint, après le constat, l'apprenant et l'évaluateur fixent
+ensemble le sprint suivant, en 3 lignes écrites au livret : le **rôle** dans
+l'équipe, les **objectifs prioritaires** parmi les 12, les **aménagements**
+s'il y en a (ceux à la portée du format sont listés dans la procédure d'accueil
+des publics en situation de handicap). Le livret dit ainsi où en est la personne, et ce qui
+est ajusté pour elle.
 
 ## L'instrument de saisie
 
-Une **grille d'observation individuelle** remplie par sprint, extension de la
-grille B2 déjà prévue à l'item 3 des documents à produire. Elle porte les douze
-objectifs, pas seulement la collaboration.
+Une **grille d'observation individuelle** est remplie par sprint. Elle étend la
+grille B2 déjà prévue à l'item 3 des documents à produire et porte les 12
+objectifs.
+
+Le **gabarit du livret** est l'instrument remis à chaque apprenant :
+`agona-livret-progression-gabarit.pdf`, 8 pages (identité et mode d'emploi,
+ligne de départ, une page par sprint avec le sprint suivant, bilan), généré par
+`scripts/gabarit_livret.py` depuis la table des objectifs de ce document.
 
 ## Le bilan de fin de parcours
 
-Reprend les douze objectifs, leur statut final, la ligne de départ en regard, et
-une synthèse écrite. **C'est la pièce qui alimente l'attestation de fin de
+Le bilan reprend les 12 objectifs, leur statut final, la ligne de départ en
+regard, et une synthèse écrite. **Ce bilan alimente l'attestation de fin de
 formation**, obligatoire et individuelle.
 
-Un objectif en `non atteint` en fin de parcours est écrit tel quel. Ce n'est ni
-un échec ni une sanction : c'est ce qui rend le document crédible, pour
-l'apprenant comme pour l'auditeur.
+Un objectif en `non atteint` en fin de parcours est écrit tel quel.
 
 ## Usage de l'historique git (tranché le 26/08)
 
-L'attribution individuelle s'appuie en partie sur **l'historique git**, alors que
-le [contrat de sortie du rapport de revue](contrat-rapport-revue.md) interdit
-`git blame` à l'agent de revue. Les deux règles coexistent parce qu'elles ne
-visent pas la même chose.
-
-**Ce qui produit une note ignore les auteurs.** L'agent de revue note une base de
-code, jamais une personne : l'interdiction protège l'évaluation collective de la
-mise en cause individuelle.
-
-**Ce qui constate une acquisition les identifie.** Le livret est formatif,
-individuel, sans note, sans classement, et il ne peut pas servir à exclure. Il
-lui faut donc savoir qui a écrit quoi.
-
-La portée limitée de l'interdiction est écrite symétriquement dans le contrat de
-sortie du rapport de revue.
+L'attribution individuelle s'appuie en partie sur **l'historique git**. Le
+[contrat de sortie du rapport de revue](contrat-rapport-revue.md) interdit
+`git blame` à l'agent de revue, dont la note porte sur la base de code de l'équipe.
+Le livret est formatif, individuel, sans note, sans classement et sans pouvoir
+d'exclusion, et il identifie les auteurs. La portée limitée de l'interdiction
+est écrite symétriquement dans le contrat de sortie du rapport de revue.
