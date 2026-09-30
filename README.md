@@ -5,7 +5,7 @@ développement, barèmes et livret : les documents remis aux apprenants au
 démarrage d'une promotion, réunis ici pour être repris et adaptés.
 
 Agona est une formation où des développeurs, aspirants et juniors, passent
-13 semaines sur une problématique réelle d'entreprise. Le programme, le
+11 semaines sur une problématique réelle d'entreprise. Le programme, le
 déroulé et le contexte sont sur https://agona.dev.
 
 ## Les documents

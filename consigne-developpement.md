@@ -17,6 +17,10 @@ Au prochain sprint, l'héritage est réel : une seule base continue, les 4 autre
 s'arrêtent, et vous avez 4 chances sur 5 de travailler sur du code écrit par une
 autre équipe. Toute la consigne en découle.
 
+Chaque semaine, votre équipe a une revue de code formative avec le formateur.
+Ses remarques restent dans GitHub, en commentaires de pull request ou en
+issues.
+
 ## 2. Les 2 règles à connaître avant les détails
 
 **On évalue une base de code.** La grille de revue s'applique à un dépôt, et la
@@ -37,11 +41,11 @@ interlocuteur de l'entreprise : c'est lui qui porte le besoin, qui l'explique et
 qui l'arbitre.
 
 L'entreprise marraine est invitée à **toutes vos soutenances**, celles de sprint
-comme la soutenance finale, ainsi qu'au débrief collectif. Elle y assiste en
-spectatrice pendant les séquences notées, et elle reste à l'écart de la notation
-et des notes. **Ses questions sont remises par écrit avant la séance, identiques
-pour les 5 équipes, et c'est le formateur qui les pose, en son nom.** Vos
-réponses passent elles aussi par le formateur. Vous êtes libres de toute
+comme la soutenance finale, ainsi qu'à la démonstration des 5 bases qui ouvre
+le j9. Elle y pose ses questions directement, et elle reste à l'écart de la
+notation et des notes. **Les échanges avec elle ne sont pas pris en compte dans
+votre évaluation.** Elle ne vous donne aucune consigne : le besoin est porté par
+le formateur, qui conduit la séance. Vous êtes libres de toute
 obligation envers l'entreprise marraine : compte rendu, reporting, accès à quoi
 que ce soit.
 
@@ -192,8 +196,9 @@ d'avoir la moindre conséquence.
 ## 11. La publication : votre code sera public
 
 Pendant le sprint, votre dépôt est privé : les 5 équipes travaillent chacune
-de leur côté. **Après les soutenances, les 5 bases sont publiées en open
-source, sous licence Apache 2.0, avec leur historique complet.**
+de leur côté. **Au j9, une fois gelées, les 5 bases sont publiées en open
+source, sous licence Apache 2.0, avec leur historique complet.** La
+publication précède la peer-review.
 
 La publication a 3 conséquences, à connaître avant votre premier commit.
 
@@ -247,8 +252,13 @@ une chose différente :
 | Bloc | Points | Qui |
 |---|:---:|---|
 | Qualité de la base | 35 | L'agent de revue instruit, le formateur attribue les points |
-| Soutenance | 35 | Le formateur note, après vos explications |
+| Soutenance | 35 | Le formateur et le suppléant notent chacun sur sa fiche, après vos explications. Votre note est la moyenne des 2 fiches |
 | Le regard des pairs | 30 | Les 4 autres équipes reprennent votre base en main et la notent. Votre note est la médiane des 4 fiches |
+
+Les 3 notes sont communiquées le j10 à 15h30, et le classement des 5 bases est
+annoncé le j1 suivant à 11h00. À total égal, le regard des pairs départage,
+puis la qualité de la base, puis la soutenance. Si tout reste égal, le
+formateur tranche par écrit.
 
 ## 13. Le droit à l'erreur
 

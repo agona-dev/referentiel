@@ -91,7 +91,7 @@ ou absente.
 | Absent | 0 | < 2 | < 3 |
 
 Les **ADR du sprint** (`docs/adr/`, fiches numérotées : contexte,
-options, décision, conséquences), déposés au gel du j9, sont lus par le
+options, décision, conséquences), déposés au gel, le j9 à 00h00, sont lus par le
 formateur avant la soutenance. L'oral vérifie que l'équipe sait les défendre,
 et que le code leur correspond. Une justification retenue en C2 peut amener le
 formateur à écarter un signalement du rapport de l'agent de revue sur la
@@ -164,7 +164,7 @@ ce que ça change pour moi ». La fiche porte la mention *séquence métier : je
 de rôle pédagogique, fictif, sans suite productive*.
 
 Un **repli est obligatoire** : un screencast de 3 minutes (chemin principal et
-cas d'erreur) est déposé au gel du j9, et l'intégration continue doit avoir
+cas d'erreur) est déposé au gel, le j9 à 00h00, et l'intégration continue doit avoir
 passé le démarrage et un test de fumée. Si la démo échoue en direct, l'équipe
 a 2 minutes de diagnostic à voix haute, puis le formateur tranche la cause. Si
 la cause est **externe à la base** (réseau, partage d'écran, poste,
@@ -224,13 +224,13 @@ L'ordre est fixe et le formateur tient le chrono. Il ajuste la durée de chaque
 temps, sans la publier, pour que les 5 équipes reçoivent le même traitement
 dans la même enveloppe de 30 minutes.
 
-Les 5 soutenances tiennent sur une matinée, à partir de 8h30, avec une pause
+Les 5 soutenances tiennent sur une matinée, de 9h00 à 11h45, avec une pause
 après la 3e équipe. Chaque créneau ménage un temps de transition et un temps
 de notation sur fiche après le passage de l'équipe.
 **L'arbitrage des rapports de l'agent de revue a lieu la veille** (j9 après-midi), avec la présélection des éléments du tirage : le
 formateur arrive en connaissant chaque dépôt.
 
-- Les thèmes d'arbitrage du jour sont annoncés à 8h30 à toutes les équipes
+- Les thèmes d'arbitrage du jour sont annoncés à 9h00 à toutes les équipes
   en même temps. L'ordre de passage est tiré au sort et publié la veille.
 - Les soutenances sont **ouvertes aux autres équipes**. La séquence de tirage
   peut se tenir en comité restreint à la demande d'un apprenant. Les équipes
@@ -241,19 +241,19 @@ formateur arrive en connaissant chaque dépôt.
   moins une fois avant la soutenance. Toute question peut être redirigée vers
   n'importe quel membre. La fiche note les séquences portées par chaque membre
   présent et une ligne d'observation.
-- Les notes sont arrêtées **à chaud** sur la fiche pré-imprimée, puis
-  **relues en bloc** (15 minutes d'harmonisation) avant publication
-  l'après-midi. Un ajustement d'un niveau au plus est possible, motivé par
-  écrit. Le débrief collectif revient sur les arbitrages les plus instructifs.
+- Le formateur et le suppléant arrêtent chacun leurs notes **à chaud** sur
+  leur fiche, dans l'espace, puis les **relisent en bloc** (15 minutes
+  d'harmonisation, avant 15h00). Un ajustement d'un niveau au plus est
+  possible, motivé par écrit. La note de soutenance est la moyenne des 2
+  fiches arrêtées. Elle est communiquée à 15h30, avec les 2 fiches. Le débrief de peer-review revient sur les arbitrages les plus instructifs.
 - **L'entreprise marraine est invitée aux soutenances de sprint**, dans le même
-  régime qu'en soutenance finale : comme **invitée métier**, sans prise de
-  parole pendant les séquences notées, sans participation à la notation et
-  sans accès aux notes. Ses questions, remises par écrit au formateur avant
-  la séance et **identiques pour les 5 équipes**, sont posées ou non par le
-  formateur, en son nom. Elle est également invitée au **débrief collectif de
-  l'après-midi** (démonstration de la base sélectionnée, architectures
-  comparées, apprentissages du sprint), où ses questions passent aussi par le
-  formateur.
+  régime qu'en soutenance finale : comme **invitée métier**, sans participation
+  à la notation et sans accès aux notes. Elle pose ses questions directement,
+  et **les échanges avec elle ne sont pas pris en compte dans l'évaluation** :
+  une équipe qui reçoit 3 questions et une équipe qui n'en reçoit aucune
+  passent la même soutenance. Elle ne donne de consigne à personne, et le
+  formateur conduit la séance. Elle est également invitée à la **démonstration
+  des 5 bases** qui ouvre le j9.
 
 ### En soutenance finale : 45 minutes par équipe, devant le jury
 
@@ -261,14 +261,14 @@ La structure est la même, avec des temps allongés : démo de 10 min, 3 thèmes
 d'arbitrage en 15 min, tirage sur 2 membres avec « le chemin d'une requête ».
 
 - **Le jury**, identique pour les soutenances de sprint et la soutenance
-  finale, est composé du **formateur-évaluateur, qui le préside et note**, et
-  d'un **second évaluateur pédagogique** (un formateur suppléant), extérieur à l'entreprise marraine.
+  finale, est composé du **formateur-évaluateur, qui le préside**, et d'un
+  **second évaluateur pédagogique** (un formateur suppléant), extérieur à l'entreprise marraine. Les 2 notent chaque
+  soutenance (règle 12).
 - **L'entreprise marraine est conviée à la soutenance finale comme invitée
-  métier**, sans prise de parole pendant les séquences notées. Ses questions,
-  remises par écrit au formateur avant la séance, identiques pour les
-  5 équipes, sont posées ou non par le formateur, en son nom, uniquement sur
-  la compréhension du métier (C1). La séquence de tirage (C3) se tient hors sa
-  présence.
+  métier**. Elle pose ses questions directement, sur la compréhension du
+  métier (C1), et **les échanges avec elle ne sont pas pris en compte dans
+  l'évaluation**. Elle ne donne de consigne à personne, et le formateur conduit
+  la séance. La séquence de tirage (C3) se tient hors sa présence.
 - **La base présentée est gelée avant la soutenance et remise en l'état.**
   La remise du résultat a lieu quels que soient le résultat de la soutenance
   et l'appréciation de l'entreprise, et aucune demande de modification ne
@@ -315,7 +315,8 @@ d'arbitrage en 15 min, tirage sur 2 membres avec « le chemin d'une requête ».
    montrant le code ou un schéma.
 5. **Chaque note est justifiée par écrit** sur la fiche, transmise à
    l'équipe le jour même. L'observation individuelle C3 est montrée à
-   l'apprenant dans la semaine, avec droit de commentaire consigné. Le
+   l'apprenant dans son livret dès le j10 à 15h30, avec un droit de commentaire daté,
+   à tout moment. Le
    livret est consultable par l'apprenant à tout moment. Les fiches et
    observations sont conservées au dossier de la promotion pendant la durée
    fixée dans l'information RGPD remise à l'entrée (la proposition est de
@@ -353,21 +354,35 @@ d'arbitrage en 15 min, tirage sur 2 membres avec « le chemin d'une requête ».
     L'adaptation est consignée au livret seulement. Le temps d'équipe est
     étendu d'autant, sans pénalité. Au-delà des moyens du programme,
     l'apprenant est orienté vers Ressources Handicap Formation.
-11. Une **relecture de note** se demande par écrit sous 5 jours ouvrés. Le
-    formateur relit la note avec le suppléant (ou un senior externe), sur la
-    base de la fiche, et répond par écrit sous 15 jours. L'issue est archivée
-    au dossier de la promotion. La relecture de note est distincte de la
-    réclamation du règlement du programme.
-12. Pour le **calibrage et le suivi** (révisé le 27/08), le suppléant
-    **assiste aux soutenances de chaque sprint**. Au sprint 1, il double la
-    notation du formateur sur les 5 soutenances. **À mi-parcours, il re-note
-    2 soutenances** pour mesurer la dérive de la grille. Les écarts sont
-    analysés et consignés au titre de l'amélioration continue.
+11. Une **relecture de note** se demande par écrit dans l'espace, de la
+    communication des 3 notes de la base, le j10 à 15h30, jusqu'au j1 à 9h00.
+    Le membre qui la demande choisit la note visée (revue, soutenance,
+    peer-review) et écrit son motif. Le formateur et le suppléant réexaminent
+    ensemble chaque demande, fiches sous les yeux, et écrivent une décision
+    commune avant 10h45. En cas de désaccord, le formateur tranche, et les 2
+    positions sont écrites. La réponse s'affiche sous les notes, pour toute
+    l'équipe, **avant l'annonce du classement**, le j1 à 11h00. L'issue est
+    archivée au dossier de la promotion. Une fois publiés, le classement, la
+    base commune et la recomposition des équipes sont acquis. Une note
+    corrigée après l'annonce porte la date et le motif de sa correction, et le
+    rang ne change plus.
+    L'observation individuelle portée au livret se commente à tout moment, sans
+    effet sur le classement. La relecture de note est distincte de la
+    réclamation du règlement intérieur (article 7).
+12. Pour la **notation et le calibrage** (révisé le 30/09), le suppléant
+    **note chaque soutenance** sur sa fiche, comme le formateur. La note de
+    soutenance est la **moyenne des 2 fiches arrêtées**. Au sprint 1, les 2
+    fiches servent au calibrage : les écarts sont analysés, et la lecture
+    commune écrite vaut dès le sprint 2. Les écarts sont consignés au titre de
+    l'amélioration continue.
+13. **À total égal**, au classement des bases, la note de peer-review
+    départage, puis la revue de code, puis la soutenance. Si tout reste égal,
+    le formateur tranche par écrit.
 
 ## 7. Comment se préparer (pour les équipes)
 
 - Chaque membre **lit tout le dépôt** avant le j10.
-- Les **ADR du sprint** (`docs/adr/`) sont à jour au gel du j9.
+- Les **ADR du sprint** (`docs/adr/`) sont à jour au gel, le j9 à 00h00.
 - Le **screencast de repli** (3 minutes) est déposé au gel.
 - L'équipe relit la **fiche de revue de la base héritée** et les retours
   individuels reçus par chacun.
@@ -413,7 +428,7 @@ qu'est-ce qui aurait aidé ? »
 ## 9. La fiche de soutenance (modèle)
 
 Promotion · sprint · date · équipe · membres présents (émargement) ·
-formateur · second évaluateur (soutenance) · ordre de passage · thèmes
+évaluateur (formateur ou suppléant, une fiche chacun) · ordre de passage · thèmes
 d'arbitrage du jour · cas d'erreur tiré · séquence métier (jeu de rôle
 pédagogique, fictif, sans suite productive) · pour chaque critère : niveau,
 fait observé, conseil · grille C2 (cases) · éléments tirés + membres tirés

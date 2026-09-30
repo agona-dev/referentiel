@@ -47,23 +47,48 @@ le formateur, qui rend la progression mesurable.
 
 ## Le rythme
 
-Le livret est mis à jour **à chaque fin de sprint**, au même moment que les
-évaluations collectives, par le formateur ou le suppléant. Chaque objectif
+Le livret est mis à jour **à chaque sprint** par le formateur. Chaque objectif
 touché reçoit 3 éléments : le statut, la preuve qui l'appuie, une phrase de
-commentaire.
+commentaire. L'entretien de sprint se tient le j8, 15 minutes par apprenant. Le
+constat reste provisoire jusqu'au j10 à 17h00, où le formateur l'arrête, au
+même moment que les évaluations collectives. Le suppléant lit les livrets, sans
+les remplir.
 
-L'apprenant remplit un **auto-positionnement** sur les mêmes objectifs avant
-l'entretien de sprint. L'écart entre cet auto-positionnement et le constat de
-l'évaluateur est le matériau de l'échange.
+L'apprenant remplit un **auto-positionnement** sur les mêmes objectifs. Il est
+ouvert dès le j1 du sprint et modifiable jusqu'à l'ouverture de l'entretien. Le
+formateur le découvre à cette ouverture. L'écart entre cet auto-positionnement
+et le constat de l'évaluateur est le matériau de l'échange. S'il n'est pas rendu, l'entretien porte sur le seul constat du
+formateur, et la page du sprint indique « auto-positionnement non rendu ».
+
+L'apprenant écrit sa **rétrospective personnelle** du j10 à 9h00 au samedi à
+00h00. Le formateur lit les 2 rétrospectives, la personnelle et celle de
+l'équipe, et l'apprenant le sait dès le formulaire. Une rétrospective vide
+s'affiche « non écrite ».
+
+La page du sprint (constat final, rétrospective, 3 lignes de la peer-review,
+PDF) **se fige le samedi à 00h00**. Si l'entretien n'a pas eu lieu, le
+formateur le tient dès que possible, et la page se fige à la fin de
+l'entretien. Une erreur de saisie du formateur se corrige : il rouvre la page,
+corrige, la page se refige et son PDF remplace l'ancien.
+
+La page du sprint montre aussi les **observations individuelles** :
+l'observation de soutenance (C3) si l'apprenant a été tiré, ou « non observé »,
+et celle de sa revue en peer-review. L'apprenant les commente à tout moment,
+même après que la page est figée, sans effet sur les notes.
 
 ## Le sprint suivant
 
 À l'entretien de sprint, après le constat, l'apprenant et l'évaluateur fixent
-ensemble le sprint suivant, en 3 lignes écrites au livret : le **rôle** dans
-l'équipe, les **objectifs prioritaires** parmi les 12, les **aménagements**
-s'il y en a (ceux à la portée du format sont listés dans la procédure d'accueil
-des publics en situation de handicap). Le livret dit ainsi où en est la personne, et ce qui
+ensemble le sprint suivant, en 2 lignes écrites au livret : les **objectifs
+prioritaires** parmi les 12, les **aménagements** s'il y en a (ceux à la portée
+du format sont listés dans la procédure d'accueil des publics en situation de
+handicap). Le livret dit ainsi où en est la personne, et ce qui
 est ajusté pour elle.
+
+Un objectif prioritaire dont le statut reste le même qu'au sprint d'avant est
+signalé au formateur : c'est un objectif « en arrière ». Le sprint 1, sans
+objectif prioritaire, n'a pas ce signal. Si la situation persiste, le suppléant
+la reprend avec le formateur (`/encadrement/`).
 
 ## L'instrument de saisie
 
@@ -74,13 +99,23 @@ objectifs.
 Le **gabarit du livret** est l'instrument remis à chaque apprenant :
 `agona-livret-progression-gabarit.pdf`, 8 pages (identité et mode d'emploi,
 ligne de départ, une page par sprint avec le sprint suivant, bilan), généré par
-`scripts/gabarit_livret.py` depuis la table des objectifs de ce document.
+`scripts/gabarit_livret.py` depuis la table des objectifs de ce document. Le
+livret se tient dans l'espace : l'apprenant le lit dans « Mon livret », et
+chaque page figée produit son PDF. Le gabarit documente ce format.
 
 ## Le bilan de fin de parcours
 
 Le bilan reprend les 12 objectifs, leur statut final, la ligne de départ en
-regard, et une synthèse écrite. **Ce bilan alimente l'attestation de fin de
-formation**, obligatoire et individuelle.
+regard, et une synthèse écrite. Le formateur le pré-rédige à partir du livret.
+L'apprenant écrit sa partie dès le j1 du sprint 5, jusqu'à l'ouverture de
+l'entretien de fin de parcours. Au sprint 5, le statut final qu'il donne tient
+lieu d'auto-positionnement.
+
+L'**entretien de fin de parcours** se tient le j8 du sprint 5, 15 minutes par
+apprenant, à la place de l'entretien de sprint. Il relit et complète le bilan.
+L'apprenant puis le formateur le signent dans l'espace, par signature
+électronique simple, et le PDF signé est figé. **Ce bilan alimente
+l'attestation de fin de formation**, obligatoire et individuelle.
 
 Un objectif en `non atteint` en fin de parcours est écrit tel quel.
 

@@ -4,8 +4,8 @@
 
 ## 0. Avant de commencer
 
-**Les mots du guide.** *Gel* : la version de la base figée par un tag **à la
-fin du j8, 18h**. Seuls les commits présents au tag comptent, et la base reste
+**Les mots du guide.** *Gel* : la version de la base figée par un tag **le j9
+à 00h00**, à la fin du j8. Seuls les commits présents au tag comptent, et la base reste
 figée pendant les 2 derniers jours du sprint. *j9, j10* : 9e et 10e jours du
 sprint. *Livret* : votre dossier individuel de compétences, tenu par le
 formateur, consultable à tout moment. *B1 à B3* : les 3 blocs de compétences
@@ -13,17 +13,24 @@ du programme. *Registre de décisions (ADR)* : la page où l'équipe évaluée a
 ses choix (options, raisons, inconvénients), déposée au gel. *Changement
 sonde* : une petite modification imposée, qui mesure ce qu'il en coûte de
 modifier la base. *Erreur avalée* : un `try/except` ou `catch` qui attrape
-l'erreur et l'ignore. *Relecture de note* : vous pouvez demander par écrit au
-formateur de réexaminer une note.
+l'erreur et l'ignore. *Relecture de note* : vous pouvez demander par écrit, dans
+l'espace, qu'une note soit réexaminée, de la communication des notes, le j10 à
+15h30, jusqu'au j1 à 9h00. Le formateur et le suppléant la réexaminent ensemble
+avant l'annonce du classement.
 
-**À 9h00 le j9, le formateur publie sur le canal de la promotion** : les URL
-des **4 archives gelées** que vous évaluez, **l'ordre dans lequel vous les
-relisez** et les commandes pour les récupérer, les 3 éléments à localiser, le
-changement sonde, et les 4 fiches pré-renseignées (sprint, base, équipe,
-consignes, rôles à remplir). Les consignes sont identiques pour les 4 bases :
-mêmes éléments à localiser, même changement sonde. Vous commencez seulement
-quand vous avez en main les archives, les éléments à localiser, le changement
-sonde et les fiches.
+**À 9h00 le j9, le formateur publie les bases gelées dans
+le dépôt public de la promotion**, depuis son espace, une branche par équipe
+(`sprint-N/equipe-K`). Chaque branche est poussée depuis le tag de gel : elle
+porte la base telle qu'elle était à la fin du j8. Une base bloquée par le
+contrôle du gel n'est pas publiée, et l'espace dit pourquoi.
+
+Le formateur publie au même moment sur le canal de la promotion **l'ordre dans
+lequel vous relisez les 4 bases que vous évaluez** et la commande `git clone`
+de chaque branche, les 3 éléments à localiser, le changement sonde, et les
+4 fiches pré-renseignées (sprint, base, équipe, consignes, rôles à remplir).
+Les consignes sont identiques pour les 4 bases : mêmes éléments à localiser,
+même changement sonde. Vous commencez seulement quand vous avez cloné les
+4 branches et reçu les éléments à localiser, le changement sonde et les fiches.
 
 **Vous travaillez sur vos machines, dans l'environnement de référence de la
 promotion** (versions listées, Docker installé, images et dépendances
@@ -32,7 +39,7 @@ et réalisé le changement sonde avant la publication de 9h00.
 
 **Les fiches** sont les fichiers `peer-review-sprint-N-base-X.md`, une par
 base évaluée, dupliqués depuis le gabarit au début de la journée et remis par
-le canal de la promotion **avant 16h30 le j9**.
+le canal de la promotion **avant 17h00 le j9**.
 
 ## 1. Pourquoi c'est vous qui notez
 
@@ -85,7 +92,7 @@ sur la fiche par **un fait constaté et une piste d'amélioration**.
 
 ### P1 · Reprise en main (/8)
 
-Le binôme P1 récupère l'archive gelée et suit **uniquement le README**. Ses
+Le binôme P1 clone la branche de la base évaluée et suit **uniquement le README**. Ses
 2 membres échangent seulement entre eux. Chacun travaille sur sa machine. On
 retient le temps le plus long et ce qui a différé entre les 2.
 
@@ -141,9 +148,10 @@ pédagogique, avant le gel. Le formateur l'a réalisé lui-même sur chaque base
 en 5 minutes ou moins. Au-delà de 5 minutes, il l'a remplacé par un
 changement de même taille.
 
-Le binôme P3 travaille sur l'archive gelée, **en lecture seule sur le dépôt
-évalué**. Il crée une branche locale (`git checkout -b sonde-<votre-equipe>`),
-et tout reste en local : la commande `git push` est proscrite. Le binôme a
+Le binôme P3 travaille sur le clone de la branche gelée, **en lecture seule
+sur le dépôt évalué**. Il crée une branche locale
+(`git checkout -b sonde-<votre-equipe>`), et tout reste en local : la commande
+`git push` est proscrite. Le binôme a
 **20 minutes chrono** pour réaliser le changement (30 au sprint 1, ou la
 fourchette fixée par le formateur au gel), puis 5 minutes pour consigner le
 patch et les observations. À la fin du chrono, le binôme s'arrête là où il en
@@ -184,20 +192,30 @@ module ou un dossier.
 ## 3. Comment vous organiser : la journée du j9
 
 Le code est gelé à la fin du j8. **Le j9 est entièrement consacré à la
-peer-review**, le j10 aux soutenances et au classement. Vous relisez les
-**4 autres bases**, l'une après l'autre, pendant environ 75 minutes chacune.
+peer-review**, le j10 aux soutenances et aux notes. Le classement est annoncé
+le j1 à 11h00. La journée s'ouvre par
+la démonstration des 5 bases, puis vous relisez les **4 autres bases**, l'une
+après l'autre, pendant environ 75 minutes chacune.
 
 | Temps | Quoi |
 |---|---|
-| 9h00 à 9h20 | Brief du formateur, récupération des 4 archives, duplication des 4 fiches, répartition des rôles |
-| 9h20 à 10h35 | **Base 1** |
-| 10h45 à 12h00 | **Base 2** |
-| 13h00 à 14h15 | **Base 3** |
-| 14h25 à 15h40 | **Base 4** |
-| 15h40 à 16h30 | Relecture des 4 fiches par l'équipe, mise au propre, remise |
+| 9h00 à 9h40 | **Démonstration des 5 bases**, 8 minutes par équipe : le produit qui tourne, le code fermé. L'entreprise marraine y est invitée |
+| 9h40 à 10h00 | Brief du formateur, clone des 4 bases à relire, duplication des 4 fiches, répartition des rôles |
+| 10h00 à 11h15 | **Base 1** |
+| 11h15 à 12h30 | **Base 2** |
+| 13h30 à 14h45 | **Base 3** |
+| 14h55 à 16h10 | **Base 4** |
+| 16h10 à 17h00 | Relecture des 4 fiches par l'équipe, mise au propre, remise |
+
+**La démonstration ne se note pas.** Chaque équipe dispose de 8 minutes pour
+montrer ce que sa base produit : le produit tourne à l'écran, le code reste
+fermé. Vous savez ainsi, avant de relire, ce que chaque base est censée faire :
+les 20 minutes de démarrage chronométré et les 10 minutes de localisation
+mesurent alors l'écart entre ce que vous avez vu tourner et ce que vous
+retrouvez dans le code.
 
 **Les 75 minutes d'une base se répartissent en** 20 minutes de démarrage
-chronométré (archive, README, lancement, tests), 10 minutes de localisation
+chronométré (clone, README, lancement, tests), 10 minutes de localisation
 des 3 éléments en silence, 20 minutes de changement sonde puis 5 minutes de
 consignation du patch et des observations, 10 minutes de verdict collectif et
 10 minutes de fiche.
@@ -234,14 +252,15 @@ prendre le protocole en main.
   de l'équipe B »). L'autorisation exclut la copie de fichiers entiers.
 - **Lisez les ADR pour connaître les intentions de l'équipe.** Si la
   justification manque, notez qu'elle manque : la soutenance tranchera.
-- **La base évaluée reste intacte** : vous travaillez sur l'archive gelée, la
-  sonde se fait sur une branche locale, et seule la fiche est partagée.
+- **La base évaluée reste intacte** : vous travaillez sur un clone de la
+  branche gelée, la sonde se fait sur une branche locale, et seule la fiche
+  est partagée.
 - **Les outils d'IA** peuvent vous
   expliquer un fichier ou une commande. Les forces et faiblesses viennent de
   fichiers que vous avez ouverts vous-mêmes. Pendant la peer-review, le
-  rapport de l'agent de revue reste au formateur. Au débrief, une personne
-  tirée au sort montre à l'écran une faiblesse de la fiche et le fichier
-  concerné.
+  rapport de l'agent de revue reste au formateur. Au débrief, l'équipe qui a
+  écrit une faiblesse jugée pas utile ou pas comprise la défend devant la
+  promotion.
 
 ## 5. Comment votre revue est observée
 
@@ -312,12 +331,15 @@ ancrée »).
    après modération, un constat est consigné au livret. L'équipe évaluée peut
    demander une remédiation (réallocation du temps d'encadrement), consignée
    au livret avec le constat, l'objectif et la réévaluation au sprint suivant.
-7. Les **4 parties partagées sont transmises à l'équipe évaluée le j10
-   après-midi**, avec la revue de code et la soutenance. L'équipe évaluée
-   renvoie une ligne par faiblesse : utile / pas utile / pas compris. Une
-   relecture de note (procédure du barème oral, règle 11) peut modifier le
-   score publié et le livret. La sélection de la base commune déjà déployée
-   reste acquise.
+7. **Le j10 à 13h30, l'équipe évaluée reçoit les faiblesses relevées par
+   les 4 fiches**, avec le rapport arbitré de l'agent de revue. Elle renvoie,
+   entre 14h30 et 15h30, une ligne par faiblesse : utile / pas utile / pas
+   compris. La saisie se ferme à 15h30, et une faiblesse sans réponse reste
+   marquée « sans réponse ». À 15h30, les 4 fiches modérées lui sont
+   transmises complètes, avec les 3 notes. Une demande de relecture
+   (procédure du barème oral, règle 11) se dépose ensuite, jusqu'au j1 à
+   9h00, et elle est tranchée avant l'annonce du classement. Chaque « pas
+   utile » et chaque « pas compris » est repris au débrief.
 8. **La fiche est communiquée aux 2 équipes**, conservée au dossier de la
    promotion, et elle accompagne la base sélectionnée à la passation (avec les
    fiches de revue de code et de soutenance). **Elle n'est jamais
@@ -345,16 +367,26 @@ ancrée »).
 
 ## 7. Le débrief : la phase réflexive
 
-Le **débrief de peer-review** a lieu au j10. Il dure 30 minutes et réunit
-l'équipe évaluatrice, l'équipe évaluée et le formateur, hors la présence de
-l'entreprise marraine. Chaque faiblesse y est confrontée à la réponse de
-l'équipe évaluée. Une personne tirée au sort dans l'équipe évaluatrice montre
-à l'écran une faiblesse et le fichier concerné. Suivent 10 minutes où chaque
-équipe dit ce qu'elle reprend de la base qu'elle a relue. Le formateur cite
-les 2 fiches les plus utiles de la promotion, et dit pourquoi. Chacun consigne
-ensuite au livret, dans sa rétrospective écrite, 3 lignes : « ce que j'ai
-appris en relisant une autre base ». Le débrief est une phase réflexive,
-distincte de la pratique : on y analyse ce qui a été fait.
+Le **débrief de peer-review** réunit les 5 équipes et le formateur au j10, de
+15h45 à 17h00, hors la présence de l'entreprise marraine. Le débrief est une
+phase réflexive, distincte de la pratique : on y analyse ce qui a été fait.
+
+Entre 14h30 et 15h30 le même jour, l'équipe évaluée répond par écrit à chaque
+faiblesse reçue : utile, pas utile ou pas compris. La saisie se ferme à 15h30.
+
+Le débrief se déroule en 5 tours de 13 minutes, un par base. Une personne
+tirée au sort dans l'équipe évaluée présente les faiblesses que sa base a
+reçues et ce que l'équipe en fait. Chaque « pas utile » et chaque « pas
+compris » rend la parole à l'équipe qui a écrit la faiblesse, qui la défend.
+Une faiblesse restée « sans réponse » est présentée comme les autres.
+Le formateur traite au fil des tours les écarts entre les 4 fiches d'une base
+et les problèmes de calibration d'une équipe évaluatrice.
+
+Dans les 10 dernières minutes, chaque équipe dit ce qu'elle reprend de la base
+qu'elle a relue, le formateur cite les 2 fiches les plus utiles de la promotion
+en disant pourquoi, et chacun consigne au livret 3 lignes : « ce que j'ai
+appris en relisant une autre base ». Les 3 lignes se complètent jusqu'au samedi
+à 00h00.
 
 ## 8. La fiche de peer-review (gabarit)
 
