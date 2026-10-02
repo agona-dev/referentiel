@@ -206,7 +206,7 @@ function useResource<T>(url: string) {
 
 ### 06 · Tests /6
 
-Ce critère note la couverture des [**règles métier et de leurs cas limites**](https://agona.dev/consigne/#tests), en priorité là où une erreur coûte cher (argent, données, sécurité, action irréversible), et des tests qui tournent d'une seule commande.
+Ce critère note la couverture des [**règles métier et de leurs cas limites**](https://agona.dev/consigne/#tests), en priorité là où une erreur coûte cher (argent, données, sécurité, action irréversible), des tests qui tournent d'une seule commande, et le [**plan de tests**](https://agona.dev/consigne/#tests) qui relie chaque règle à ses tests.
 
 La couverture ne dit pas si vos tests sont bons. Elle dit seulement quelles lignes ne sont jamais exécutées pendant les tests : on peut atteindre 100 % sans rien vérifier du tout. Alors ne visez pas un pourcentage. Partez des règles du projet, par exemple « une commande vide est refusée » ou « une remise ne dépasse jamais 50 % », et écrivez un test par règle, puis un test par cas limite. Un seul gros test qui rejoue tout le parcours ne suffit pas : quand il casse, il ne dit pas où.
 
@@ -225,6 +225,7 @@ def test_create_order_refuse_quantite_negative(client):
 
 **Ce qu'on veut voir**
 - Un test par règle métier, un test par cas limite (entrée vide, zéro, négatif).
+- Le plan de tests est à jour au gel : chaque règle y renvoie à son test et à son résultat.
 
 **Ce qui fait chuter la note**
 - Seul le « chemin heureux » est testé, ou lancer les tests demande un setup manuel.
@@ -233,8 +234,8 @@ def test_create_order_refuse_quantite_negative(client):
 
 | Niveau | Points | On observe |
 |---|---|---|
-| Maîtrisé | 6 | Les règles métier et leurs cas limites sont couverts au niveau de test qui convient ; la logique métier se teste sans base de données ni réseau ; la suite tourne en une commande |
-| Solide | 4 | Les règles principales sont couvertes ; des cas limites manquent, ou le lancement demande un pas manuel |
+| Maîtrisé | 6 | Les règles métier et leurs cas limites sont couverts au niveau de test qui convient ; la logique métier se teste sans base de données ni réseau ; la suite tourne en une commande ; le plan de tests est à jour |
+| Solide | 4 | Les règles principales sont couvertes ; des cas limites manquent, le plan de tests est incomplet, ou le lancement demande un pas manuel |
 | Fragile | 2 | Seul le chemin nominal est testé, ou des tests sans assertion utile |
 | Absent | 0 | Pas de test sur la logique métier, ou la suite ne tourne pas |
 
@@ -406,6 +407,7 @@ Avant chaque revue, l'équipe vérifie elle-même sa base contre cette checklist
 - La logique métier est couverte par des tests automatisés qui passent.
 - Au moins un test par cas limite identifié.
 - Les tests tournent d'une seule commande, sans setup manuel.
+- Le plan de tests (`docs/plan-de-tests.md`) est à jour au gel.
 
 **Reprenabilité**
 - README : lancer le projet et les tests en moins de 5 minutes.

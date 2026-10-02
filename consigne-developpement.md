@@ -64,6 +64,8 @@ l'emplacement des fichiers y est fixé.
 - **Les tests ont leur place** : `tests/unit/`, `tests/integration/`,
   `tests/e2e/`. Vous écrivez ce que vous jugez utile, quand vous le jugez utile.
   On vous demande seulement de le ranger là.
+- **Le plan de tests a sa place** : `docs/plan-de-tests.md`. La section 7
+  explique comment le tenir.
 - **Les décisions ont leur place** : `docs/adr/`. La section 6 explique comment
   les écrire.
 
@@ -77,6 +79,8 @@ type dans ces dossiers.
   votre contexte.
 - Le **README** dit quoi faire, dans l'ordre, sans supposer qu'on vous a parlé.
 - Les **tests** couvrent ce qui porte de la logique métier.
+- Le **plan de tests** est à jour, avec le résultat de chaque test sur la base
+  gelée.
 - Les **décisions structurelles du sprint ont leur ADR**.
 - Le dépôt est **exempt de tout secret** et de toute donnée réelle.
 
@@ -137,6 +141,16 @@ craindre.
 - **Partez des règles du projet : une règle, un test.** Le pourcentage de
   couverture indique seulement quelles lignes les tests exécutent. L'utilité
   d'un test tient à ce qu'il vérifie.
+
+**Le plan de tests** (`docs/plan-de-tests.md`) relie chaque règle du projet aux
+tests qui la vérifient. Il compte une ligne par règle et par cas limite : la
+règle, le cas visé, le test qui la vérifie, son niveau et son résultat au gel.
+L'équipe suivante y lit ce qui est vérifié avant de modifier le code.
+
+| Règle | Cas visé | Test | Niveau | Résultat au gel |
+| --- | --- | --- | --- | --- |
+| Une commande vide est refusée | Panier sans article | `tests/unit/test_order.py::test_commande_vide_refusee` | Unitaire | Passe |
+| La quantité est strictement positive | Quantité négative | `tests/integration/test_orders_api.py::test_create_order_refuse_quantite_negative` | Intégration | Passe |
 
 ## 8. Duplication, abstraction, structure
 

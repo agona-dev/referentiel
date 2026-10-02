@@ -383,6 +383,7 @@ d'arbitrage en 15 min, tirage sur 2 membres avec « le chemin d'une requête ».
 
 - Chaque membre **lit tout le dépôt** avant le j10.
 - Les **ADR du sprint** (`docs/adr/`) sont à jour au gel, le j9 à 00h00.
+- Le **plan de tests** (`docs/plan-de-tests.md`) est à jour au gel.
 - Le **screencast de repli** (3 minutes) est déposé au gel.
 - L'équipe relit la **fiche de revue de la base héritée** et les retours
   individuels reçus par chacun.
