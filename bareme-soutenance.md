@@ -50,7 +50,8 @@ pour le supérieur. Chaque critère est **justifié par écrit** sur la fiche
 L'équipe a compris le **problème** à résoudre, au-delà de la fonctionnalité à
 produire. La note de cadrage du sprint fixe d'avance, pour les 5 équipes,
 **3 à 5 contraintes et cas limites attendus** et le périmètre que le formateur
-s'attend à voir écarté. La fiche les pré-renseigne.
+s'attend à voir écarté. La fiche les pré-renseigne. La maquette des écrans du
+sprint (`docs/maquettes/`) sert de support à la reformulation.
 
 | Niveau | Pts | On observe |
 |---|:-:|---|
@@ -214,7 +215,7 @@ mieux s'organiser. »
 
 | | Séquence | Critère |
 |---|---|---|
-| 01 | **Le besoin** : reformulation, contraintes, périmètre écarté | C1 |
+| 01 | **Le besoin** : reformulation appuyée sur la maquette, contraintes, périmètre écarté | C1 |
 | 02 | **La démo** : chemin principal, cas d'erreur tiré, puis séquence métier | C4 |
 | 03 | **Les arbitrages** : 2 thèmes, 4 questions, relances | C2 |
 | 04 | **Le tirage** : 2 membres, un élément chacun | C3 |
@@ -383,6 +384,7 @@ d'arbitrage en 15 min, tirage sur 2 membres avec « le chemin d'une requête ».
 
 - Chaque membre **lit tout le dépôt** avant le j10.
 - Les **ADR du sprint** (`docs/adr/`) sont à jour au gel, le j9 à 00h00.
+- Les **maquettes** (`docs/maquettes/`) sont à jour au gel.
 - Le **plan de tests** (`docs/plan-de-tests.md`) est à jour au gel.
 - Le **screencast de repli** (3 minutes) est déposé au gel.
 - L'équipe relit la **fiche de revue de la base héritée** et les retours
@@ -398,7 +400,8 @@ sprint. Le formateur peut dire « montrez-moi ».
 **C1 · Besoin** : « Reformulez le problème en une phrase, sans parler de
 technique. » « Quel cas limite vous a posé le plus de questions ? » « Qu'avez-
 vous volontairement laissé de côté, et pourquoi ? » « Si le besoin était mal
-compris, où le verrait-on dans votre code ? »
+compris, où le verrait-on dans votre code ? » « Montrez sur la maquette le
+parcours que vous avez retenu. »
 
 **C2 · Arbitrages** : les 4 questions, appliquées aux thèmes du jour. Les
 relances possibles sont « qu'est-ce qui vous aurait fait choisir l'autre

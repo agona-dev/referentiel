@@ -64,6 +64,11 @@ l'emplacement des fichiers y est fixé.
 - **Les tests ont leur place** : `tests/unit/`, `tests/integration/`,
   `tests/e2e/`. Vous écrivez ce que vous jugez utile, quand vous le jugez utile.
   On vous demande seulement de le ranger là.
+- **Les maquettes ont leur place** : `docs/maquettes/`. Au sprint planning,
+  avant d'écrire le code, l'équipe maquette les écrans touchés par les user
+  stories du sprint : les écrans, l'enchaînement du parcours, et les états
+  vide, erreur et chargement. Une maquette basse fidélité suffit, faite avec
+  l'outil de votre choix (Excalidraw, Penpot) et exportée en image.
 - **Le plan de tests a sa place** : `docs/plan-de-tests.md`. La section 7
   explique comment le tenir.
 - **Les décisions ont leur place** : `docs/adr/`. La section 6 explique comment
@@ -79,6 +84,7 @@ type dans ces dossiers.
   votre contexte.
 - Le **README** dit quoi faire, dans l'ordre, sans supposer qu'on vous a parlé.
 - Les **tests** couvrent ce qui porte de la logique métier.
+- Les **écrans du sprint ont leur maquette**, à jour de ce qui a été livré.
 - Le **plan de tests** est à jour, avec le résultat de chaque test sur la base
   gelée.
 - Les **décisions structurelles du sprint ont leur ADR**.
